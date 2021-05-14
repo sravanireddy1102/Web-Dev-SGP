@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=	, initial-scale=1.0">
+    <title>Simple calculator</title>
+    <style>
+        *{
+            background-color: aqua;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+</body>
+<script>
+    window.onload=function(){
+        console.log("Simple calculator");
+        var result;
+        while(true){
+            const choice=prompt("Enter 1.start 2.stop");
+            if(choice==2){
+                break;
+            }
+            else if(choice==1){
+                const operator=prompt("Enter operator either +, -, * or / ");
+                const input1=parseFloat(prompt("Enter first number"));
+                const input2=parseFloat(prompt("Enter second number"));//converting the input string to  float ..
+                switch(operator){
+                    case '+':
+                        result=input1+input2;
+                        //console.log(`${input1}+${input2}=${result}`);
+                        window.alert("The result is:  " + result);
+                        break;
+                    case '-':
+                        result=input1-input2;
+                        //console.log(`${input1}-${input2}=${result}`);
+                        window.alert("The result is:  " + result);
+                        break;
+                    case '*':
+                        result=input1*input2;
+                        //console.log(`${input1}*${input2}=${result}`);
+                        window.alert("The result is:  " + result);
+                        break;
+                    case '/':
+                        result=input1/input2;
+                        //console.log(`${input1}/${input2}=${result}`);
+                        window.alert("The result is:  " + result);
+                        break;
+                    default:
+                        window.alert("Please choose valid operator");
+                        break;
+                }
+                
+            }
+    }
+    }     
+    </script>
+</html>
